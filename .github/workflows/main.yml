@@ -1,11 +1,11 @@
 name: Deploy Website
 on:
-  push: 
-    branches: [ main ]
+  push:
+    branches: [main]
   workflow_dispatch:
 
 jobs:
-  deploy: 
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: checout reop
