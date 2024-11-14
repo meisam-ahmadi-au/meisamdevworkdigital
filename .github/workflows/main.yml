@@ -19,6 +19,6 @@ jobs:
       - name: install modules & build
         run: echo npm ci
       - name: Deploy to s3
-        run: aws s3 sync ./public s3:${{ secrets.BUCKET_NAME }}
+        run: aws s3 sync ./public s3://${{ secrets.BUCKET_NAME }}
       - name: Create Cloudfront Invalidation
         run: aws cloudfront create-invalidation --distribution-id ${{ secrets.DISTRIBUTION_ID }} --paths "/*"
